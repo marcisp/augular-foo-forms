@@ -1,0 +1,43 @@
+<div class="container">
+  
+  <div class="py-5 text-center">
+      <h2>Hello There</h2>
+      <p class="lead">This is a task demonstrating my knowledge developing applications with Angular.</p>
+  </div>
+  
+  <form #heroForm="ngForm" class="needs-validation" novalidate action="" method="POST">
+    
+    <div class="mb-3">
+      <label for="input">Input:</label>
+      <div class="input-group is-invalid">
+        <input type="text" class="form-control" id="input" placeholder="Input" required=""
+          [(ngModel)]="model.input" 
+          name="input" 
+          (keyup)="onKey($event)"
+          [class.is-invalid]="isInvalid"
+          #input
+        >
+        <div class="invalid-feedback" style="width: 100%;">
+          Error: invalid value provided.
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="input">Output:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="output" disabled required=""
+          value="{{ output }}"
+        >
+        <div class="invalid-feedback" style="width: 100%;">
+          Your username is required.
+        </div>
+      </div>
+    </div>
+
+  </form>
+  
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© MyWebsite 2019</p>
+  </footer>
+</div>
